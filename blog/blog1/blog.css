@@ -77,6 +77,16 @@ ul li{
 	text-align: center;
 }
 
+#overview{
+	text-align: center;
+	padding-top: 1em;
+}
+
+hr{
+	border: 3px;
+	border-radius: 5px;
+}
+
 .thumbnail{
 	float: left;
 	border: 1px solid #ddd; /*gray border*/
@@ -88,7 +98,7 @@ ul li{
 
 #my-name{
 	text-shadow: 2px 2px #ffffff;
-	color: magenta;
+	color: blue;
 	font-size: x-large;
 }
 
@@ -100,7 +110,6 @@ ul li{
 #navbar{
 	display: block;
 	text-align: right;
-	position: fixed;
 	top: -1em;
 	width: 100%;
 }
@@ -117,7 +126,7 @@ a{
 }
 
 a:hover{
-	color: red;
+	color: gray;
 }
 
 h3{
