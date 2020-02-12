@@ -35,6 +35,7 @@ body{
 
 .text-blue{
 	color: cyan; 
+	font-size: 30px;
 }
 
 .text-green{
@@ -147,4 +148,12 @@ h3{
 	display: block;
 	font-family: 'Caveat', cursive;
 	font-size: 24px;
+}
+
+p{
+	font-size: 25px;
+}
+
+.list{
+	background-color: gray;
 }
