@@ -7,6 +7,7 @@
 		<link rel="icon" type="image/png" sizes="32x32" href="images/favicon_io/favicon-32x32.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="images/favicon_io/favicon-16x16.png">
 		<link rel="manifest" href="/site.webmanifest">
+		<link rel="stylesheet" type="text/css" href="style.css">
 
 		<style>
 			section:before{
@@ -29,10 +30,18 @@
 				scroll-behavior: smooth;
 			}
 		</style>
+
+
 	</head>
 
 
 	<body>
+
+		<script src="script.js"></script>
+		<div class="loader">
+    	<img src="loading.gif" alt="Loading..." />
+		</div>
+
 		<nav id = "top-navbar" class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
 			<a class="navbar-brand" href="#section-showcase"><strong>Jacob's Web Portfolio</strong></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu">
@@ -53,7 +62,10 @@
 		<section id = "section-showcase" class="jumbotron d-flex align-items-center">
 			<div class="container text-center text-light">
 				<h1>Jacob's Web Portfolio</h1>
-				<p> description goes here</p>
+				<p class="bg-info"> 
+					Hello my name is Jacob and this is a place for me to 
+					showcase my computer skills and life experiences.
+				</p>
 			</div>
 		</section>
 
@@ -61,7 +73,11 @@
 			<aside id = "sidebar" class="bg-dark">
 				<div class="bg-dark text-light float-right col-4 pt-4 mt-4">
 					<h3>News:</h3>
-					<p>This is a place for some placeholder text.</p>
+					<p>
+						The website is currently undergoing layout and stylistic changes
+						to make the website more pleasing to the user. Feedback is wolcome 
+						via the contact section below.
+					</p>
 				</div>
 			</aside>
 
@@ -69,9 +85,10 @@
 				<h1>Welcome</h1>
 				<hr>
 				<p>
-					This section welcomes people to your page and summarizes what the 
-					page is about and what the purpose of it is for. Add your own
-					comments here.
+					Welcome to my web portfolio. This is a place for nme to showcase my abilities that
+					I learn as a computer science student. Also I share some of my life experiences so
+					that you all can understand who I am a little better. I designed and implemted 
+					everything posted on this website. 
 				</p>
 			</section>
 
@@ -84,7 +101,11 @@
 					</div>
 					<div class="col-lg-10 col-sm-8">
 						<h4>Jacob Tingler</h4>
-						<p>This is info about me.</p>
+						<p>
+							I am currently an undergraduate student studying computer science at 
+							The University of New Orleans with aspirations to become a web developer
+							in the future. 
+						</p>
 					</div>
 				</div>
 				<table class="table mt-4 text-light">
