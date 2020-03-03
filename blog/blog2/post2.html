@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<title>Loading Screen</title>
+</head>
+<body>
+	<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+        <ul class="nav navbar-nav ml-auto">
+            <li class="nav-item"> <a class="nav-link text-info" href='../../index.html#section-blog'> Home </a> </li>
+        </ul>
+    </nav>
+
+
+    <div class="p-5">
+    	<h1 class="text-center">How to Create Your Own Loading Page</h1>
+    </div>
+
+    <div>
+    	<h3 class="text-center">Intro</h3>
+    	<p class="text-center">
+    		To create a simple loading page can be done usin only HTML, CSS, and JavaScript.
+    		It may be easier then one might think and adds a professitional look to a website
+    		for the little work that is required.
+    	</p>
+
+    	<h3 class="text-center">HTML</h3>
+    	<p class="text-center">
+    		The HTML for the loading page is very simple. You must add a div inside the 
+    		body of the webpage that you would like to have the loading screen appear. 
+    		inside the div add a img tag that contains a gif. Set the div class to <i>"loader"</i>
+    		and set the alt of the img to <i>"Loading..."</i> <mark>Also do not forget to add the script 
+    		that we will make later.</mark>
+    		<br>
+    		See picture below for the code.
+    	</p>
+    	<img class="rounded mx-auto d-block" src="images/html.png">
+
+    	<h3 class="text-center">CSS</h3>
+    	<p class="text-center">
+    		The next step in the process to make the loading page is to 
+    		style the image so that it will appear centered and in the
+    		correct position when the page is loading. Define a <i>.loader</i> 
+    		class that centers the image in the window and make sure to set
+    		the z-index to 99 so that the image will appaer on top of
+    		everything else. 
+    		<br>
+    		The next class to define is the <i>.loader > img</i> class. 
+    		Inside of this class, set the width of the image to 200px.
+    		<br>
+    		Moving forward we create another class called <i>.loader.hidden</i>
+    		This class will be applied when the page is fully loaded, so
+    		we want the image to fade out with a 1 second duration.
+    		Also apply the animation-fill-mode to forwards.
+    		<br>
+    		Next define the @keyframes fadeOut rule. Set the opacity to 0
+    		and the visiblity to hidden. 
+    		<br>
+    		THe final style class that we need to define is the .thumb class.
+    		In this class set the height to 100 px, the boarder to 1px solid black,
+    		and the margin to 10px.
+    		<br>
+    		See the code below to make sure you are floowing along corectly.
+
+    	</p>
+    	<img class="rounded mx-auto d-block" src="images/css.png">
+
+    	<h3 class="text-center">JavaScript</h3>
+    	<p class="text-center">
+    		Finally we will add JavaScript to make the animation function properly.
+
+    	</p>
+		<img class="rounded mx-auto d-block" src="images/javascript.png">
+
+    </div>
+
+
+
+</body>
+</html>
