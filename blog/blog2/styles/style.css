@@ -1,0 +1,9 @@
+@media all and (max-width: 800px) //800px for tablets and phones. {
+  #html,
+  #css,
+  #js {
+    display: block;
+    float: none;
+    width: 100%;
+  }
+}

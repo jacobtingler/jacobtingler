@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project 1</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./stlye.css" />
+  </head>
+  <body id="b">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+      <ul class="nav navbar-nav ml-auto">
+        <li class="nav-item">
+          <a
+            class="nav-link text-info"
+            href="../../index.html#section-projects"
+          >
+            Home
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <h1 class="text-center m-5">
+      Click a button change the Background color.
+    </h1>
+    <div class="d-flex justify-content-center">
+      <button id="red" onclick="change(event, this.innerText)">Red</button>
+      <button id="blue" onclick="change(event, this.innerText)">Blue</button>
+      <button id="green" onclick="change(event, this.innerText)">Green</button>
+    </div>
+
+    <div id="myDiv">
+      <h1>Hey</h1>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
