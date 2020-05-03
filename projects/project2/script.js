@@ -6,28 +6,24 @@ let guessed = [];
 let wordStatus = null;
 const keys = document.getElementById("keyboard").innerHTML;
 
-var programming_languages = [
-  "python",
-  "javascript",
-  "mongodb",
-  "json",
-  "java",
-  "html",
-  "css",
-  "c",
-  "csharp",
-  "golang",
-  "kotlin",
-  "php",
-  "sql",
-  "ruby",
+var movies = [
+  "mulan",
+  "aladdin",
+  "cinderalla",
+  "bambi",
+  "tron",
+  "holes",
+  "pinocchio",
+  "bolt",
+  "dumbo",
+  "onward",
+  "brave",
+  "cars",
+  "up",
 ];
 
 function genWord() {
-  answer =
-    programming_languages[
-      Math.floor(Math.random() * programming_languages.length)
-    ];
+  answer = movies[Math.floor(Math.random() * movies.length)].toLowerCase();
   console.log("The answer is: " + answer);
 }
 
@@ -104,7 +100,7 @@ function reset() {
 const username = document.getElementById("username");
 const saveScoreBtn = document.getElementById("saveScoreBtn");
 const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
-const MAX_HIGH_SCORES = 5;
+const MAX_HIGH_SCORES = 20;
 
 saveHighScore = (e) => {
   console.log("clicked the save button");
@@ -116,7 +112,7 @@ saveHighScore = (e) => {
   };
   highScores.push(score);
   highScores.sort((a, b) => a.score - b.score);
-  highScores.splice(5);
+  highScores.splice(MAX_HIGH_SCORES);
 
   localStorage.setItem("highScores", JSON.stringify(highScores));
   window.location.assign("highscores.html");

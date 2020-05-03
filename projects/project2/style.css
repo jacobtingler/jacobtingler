@@ -1,3 +1,7 @@
 #highscore {
   display: none;
 }
+
+#highScoresList {
+  list-style-type: none;
+}
