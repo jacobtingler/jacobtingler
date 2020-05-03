@@ -73,6 +73,7 @@ function checkWin() {
 function checkLose() {
   if (wrong === maxWrong) {
     document.getElementById("keyboard").innerHTML = "You Lose !!!";
+    document.getElementById("word").innerHTML = answer;
   }
 }
 
