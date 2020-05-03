@@ -10,11 +10,15 @@
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" type="text/css" href="./style.css" />
   </head>
   <body>
     <div class="container text-center">
       <h1 class="text-center">Hangman</h1>
       <div class="float-left">Guesses: <span id="wrong">0</span> of 6</div>
+      <div id="displayHighscore" class="float-right">
+        <a href="./highscores.html">Highscores</a>
+      </div>
       <img id="pic" src="./images/0.jpg" />
       <p>Guess the Programming Language</p>
       <p id="word"></p>
@@ -45,6 +49,27 @@
         <button id="x" onclick="guess(id)">z</button>
         <button id="y" onclick="guess(id)">y</button>
         <button id="z" onclick="guess(id)">z</button>
+      </div>
+      <div id="highscore">
+        Save Score
+        <p>You got it in <span id="numGuesses">0</span> guesses</p>
+        <form>
+          <input
+            type="text"
+            name="username"
+            id="username"
+            placeholder="username"
+          />
+          <button
+            type="submit"
+            class="btn"
+            id="saveScoreBtn"
+            onclick="saveHighScore(event)"
+            disabled
+          >
+            Save
+          </button>
+        </form>
       </div>
       <div>
         <button id="reset" onclick="reset()">Reset</button>

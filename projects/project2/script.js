@@ -1,3 +1,4 @@
+//Code for the hangman game
 let maxWrong = 6;
 let wrong = 0;
 let answer = "";
@@ -27,7 +28,7 @@ function genWord() {
     programming_languages[
       Math.floor(Math.random() * programming_languages.length)
     ];
-  console.log(answer);
+  console.log("The answer is: " + answer);
 }
 
 function displayWord() {
@@ -67,6 +68,8 @@ function checkWord() {
 function checkWin() {
   if (wordStatus === answer) {
     document.getElementById("keyboard").innerHTML = "You WIN !!!";
+    document.getElementById("numGuesses").innerHTML = guessed.length;
+    document.getElementById("highscore").style.display = "block";
   }
 }
 
@@ -87,6 +90,7 @@ function updatePic() {
 
 function reset() {
   document.getElementById("pic").src = "./images/0.jpg";
+  document.getElementById("highscore").style.display = "none";
   wrong = 0;
   guessed = [];
 
@@ -95,6 +99,32 @@ function reset() {
   updateMistakes();
   document.getElementById("keyboard").innerHTML = keys;
 }
+
+//code for saving the highscores to local storage
+const username = document.getElementById("username");
+const saveScoreBtn = document.getElementById("saveScoreBtn");
+const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
+const MAX_HIGH_SCORES = 5;
+
+saveHighScore = (e) => {
+  console.log("clicked the save button");
+  e.preventDefault();
+
+  const score = {
+    score: guessed.length,
+    name: username.value,
+  };
+  highScores.push(score);
+  highScores.sort((a, b) => a.score - b.score);
+  highScores.splice(5);
+
+  localStorage.setItem("highScores", JSON.stringify(highScores));
+  window.location.assign("highscores.html");
+};
+
+username.addEventListener("keyup", () => {
+  saveScoreBtn.disabled = !username.value;
+});
 
 genWord();
 displayWord();
