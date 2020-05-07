@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hangman</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+      <ul class="nav navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link text-light" href="../../index.html#section-blog">
+            Home
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div>
+      <h1 class="p-5 text-center">Hangman Game</h1>
+      <div class="container border mb-2">
+        <h3 class="pt-3">Overview</h3>
+        <p>
+          This blog will explain the main functions of the hangman game that I
+          have posted under the projects section of my website. It was created
+          using vanilla javascript and bootstrap. The HTML is very simple and is
+          a div that contains the hangman pictures, the word to guess, and the
+          buttons used to guess the word. All of the other implementaion is
+          through javascript. In this post I will explain some of the main
+          functions that are used.
+        </p>
+        <hr />
+        <h3>Handling A Guess</h3>
+        <p>
+          The most important part of the hangman game is handling the guesses,
+          and this is done when a button from the on screen keyboard is pressed.
+          Once a button is pressed it calls the function guess() and that
+          function does most of the work for the program. First the function
+          adds the letter that was pressed into the guessed array to store all
+          the letters that have previously been guessed. Then it disables the
+          button so that the same letter cannot be guessed twice. Then it checks
+          if the guessed letter was in the answer or not, and if the letter was
+          then it calls two helper functions. The first puts the letter that was
+          guessed into an array in the correct spot for the answer and displays
+          the letters in the correct postion. The second helper method checks to
+          see if the user has correctly guessed the word. If the guessed letter
+          was not in the word then the function calls three helper methods. The
+          first updates the number of mistakes that have been made and displays
+          the number for the user to see. The second checks if the user has
+          reached the maximum number of wrong guesses and has lost the game. The
+          final helper method updates the picture for the game.
+        </p>
+        <div class="text-center">
+          <img class="" src="./images/guess.png" />
+        </div>
+        <hr />
+        <h3>Updating The Word</h3>
+        <p>
+          This function is responsible for displaying the letter that was
+          guessed. First it splits the answer into an array. Then it maps the
+          guessed letter to the correct postion to display to the user. Finally
+          it Updates the the displayed word by getting the id from the HTML
+          document. This function heavily relies upon array functions, and they
+          can be tricky, but with a good understanding of them it makes this
+          task simple.
+        </p>
+        <div class="text-center">
+          <img src="./images/checkword.png" />
+        </div>
+        <hr />
+        <h3>Saving the Scores</h3>
+        <p>
+          This section of the script is responsible for saving the users scores
+          to local storage. I created an object called score that will hold the
+          name of the user and the score that they recieved. The object is then
+          pushed to the highScores[] array and is sorted from lowest number of
+          guesses to the highest number of guesses. Finally I pushed the object
+          into local storage by stringifying the highScores array. The code
+          below the function will not allow a score to be saved unless a
+          username is entered into the input box.
+        </p>
+        <div class="text-center">
+          <img src="./images/saveScore.png" />
+        </div>
+        <hr />
+        <h3>Conclusion</h3>
+        <p>
+          This is a great project for people that are starting to learn
+          javascript. It uses some important array functions that will make you
+          understand them fully. Also, it uses the local storage of the browser,
+          and that is also a great thing ot learn for you to further your
+          programming development.
+        </p>
+      </div>
+      <div class="text-center">
+        <a
+          class="btn btn-dark"
+          href="https://github.com/jacobtingler/jacobtingler/tree/master/projects/project2"
+          target="_blank"
+          >Link to the github repo contains the source code.
+        </a>
+      </div>
+    </div>
+    <h3 class="text-center mt-5">About me</h3>
+    <div class="container border mb-2">
+      <img
+        class="col-lg-2 col-sm-4 rounded-circle pt-2"
+        src="images/profile.jpg"
+      />
+      <h4>Jacob Tingler</h4>
+      <span>
+        I am a native New Olreanian, and I currently go to University of New
+        Orleans. I have created this blog to share how to make your very own
+        hangman game. I hope that it works as a good guide for you, and that you
+        are able to implement it into your own website!
+      </span>
+    </div>
+  </body>
+</html>
